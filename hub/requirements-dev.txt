@@ -1,0 +1,2 @@
+# Development / test dependencies (all free, open-source)
+pytest>=8.0  # MIT license
