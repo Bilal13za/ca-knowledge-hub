@@ -4,7 +4,7 @@
 # All free/open-source. Licences verified 2026-10-21 (spec section 3B).
 # UI stack: Streamlit, CONFIRMED by STACK_DECISION.md (measured: ~50 MB
 # server, one shared venv, telemetry disabled via .streamlit/config.toml).
-streamlit==1.32.*  # Apache-2.0 — UI shell + module pages (localhost only)
+streamlit>=1.32  # Apache-2.0 — UI shell + module pages (floor, not pin: lets pip pick wheels for the local Python)
 pypdf>=4.0          # BSD-3-Clause — PDF text extraction (never renders/executes)
 python-docx>=1.1    # MIT — DOCX text extraction
 openpyxl>=3.1       # MIT — XLSX read (read_only + data_only; macros never executed)
