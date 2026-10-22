@@ -1,0 +1,11 @@
+# Root-level copy for Streamlit Community Cloud (it reads requirements.txt from the repo root).
+# Main module: hub/app.py — keep in sync with hub/requirements.txt.
+# CA Knowledge Hub — runtime dependencies
+# All free/open-source. Licences verified 2026-10-21 (spec section 3B).
+# UI stack: Streamlit, CONFIRMED by STACK_DECISION.md (measured: ~50 MB
+# server, one shared venv, telemetry disabled via .streamlit/config.toml).
+streamlit==1.32.*  # Apache-2.0 — UI shell + module pages (localhost only)
+pypdf>=4.0          # BSD-3-Clause — PDF text extraction (never renders/executes)
+python-docx>=1.1    # MIT — DOCX text extraction
+openpyxl>=3.1       # MIT — XLSX read (read_only + data_only; macros never executed)
+pandas>=2.0         # BSD-3-Clause — spreadsheet analysis (Phases 5-6)
